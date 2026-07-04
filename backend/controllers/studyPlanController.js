@@ -19,9 +19,8 @@ export const createStudyPlan = async (req, res) => {
       planData
     });
 
-    // Send the study plan via email
-    if (req.user && req.user.email) {
-      // Send email asynchronously without blocking the response
+    if (req.user && req.user.email) 
+    {
       sendStudyPlanEmail(req.user.email, req.user.name || 'Student', planData, topic);
     }
 
@@ -33,7 +32,8 @@ export const createStudyPlan = async (req, res) => {
 };
 
 export const getStudyPlanHistory = async (req, res) => {
-  try {
+  try
+  {
     const history = await StudyPlan.find({ user: req.user._id }).sort({ createdAt: -1 });
     res.status(200).json(history);
   } catch (error) {
