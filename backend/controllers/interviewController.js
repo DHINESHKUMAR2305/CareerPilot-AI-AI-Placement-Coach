@@ -49,13 +49,11 @@ export const submitAnswer = async (req, res) => {
       aiEvaluation: evaluation
     });
 
-    // Recalculate overall score
     const totalScore = interview.questionsAndAnswers.reduce((acc, curr) => acc + curr.aiEvaluation.score, 0);
     interview.overallScore = totalScore / interview.questionsAndAnswers.length;
     
     await interview.save();
 
-    // Generate next question
     const previousQuestions = interview.questionsAndAnswers.map(qa => qa.question);
     const nextQuestion = await generateMockInterviewQuestion(interview.role, interview.difficulty, previousQuestions);
 
@@ -64,7 +62,8 @@ export const submitAnswer = async (req, res) => {
       nextQuestion,
       overallScore: interview.overallScore
     });
-  } catch (error) {
+  } 
+  catch(error) {
     res.status(500).json({ message: 'Failed to submit answer' });
   }
 };
