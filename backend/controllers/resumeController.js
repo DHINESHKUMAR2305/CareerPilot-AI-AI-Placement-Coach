@@ -26,7 +26,6 @@ export const uploadAndAnalyzeResume = async (req, res) => {
       ...analysis
     });
 
-    // Clean up uploaded file
     fs.unlinkSync(req.file.path);
 
     res.status(201).json(savedAnalysis);
