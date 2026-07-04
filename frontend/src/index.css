@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #8b5cf6;
+  --color-bg-dark: #0f172a;
+  --color-bg-light: #f8fafc;
+  --color-surface-dark: #1e293b;
+  --color-surface-light: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased selection:bg-primary selection:text-white transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .glassmorphism-dark {
+    @apply bg-slate-800/40 backdrop-blur-lg border border-slate-700/50 shadow-2xl;
+  }
+}
