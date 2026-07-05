@@ -36,7 +36,7 @@ const Home = () => {
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-slate-300">Your AI-Powered Placement Coach</span>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,16 +45,16 @@ const Home = () => {
           >
             Master Your Career <br className="hidden md:block" /> With <span className="text-primary">CareerPilot AI</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10"
           >
-            Elevate your placement preparation with intelligent resume analysis, dynamic mock interviews, and personalized technical assessments powered by Google Gemini AI.
+            Elevate your placement preparation with intelligent resume analysis, dynamic mock interviews, and personalized technical assessments.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Comprehensive AI Tools</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">Everything you need to secure your dream role, all in one intelligent platform.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
               icon={FileText}
@@ -128,7 +128,7 @@ const Home = () => {
           )}
         </div>
       </section>
-      
+
       {/* Simple Footer */}
       <footer className="border-t border-white/10 bg-slate-900 py-8">
         <div className="max-w-7xl mx-auto px-4 text-center text-slate-500">
